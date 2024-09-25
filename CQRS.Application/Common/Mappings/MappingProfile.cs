@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using CQRS.Application.Blogs.Queries.GetBlogs;
+using CQRS.Domain.Entity;
 using System.Reflection;
 
 namespace CQRS.Application.Common.Mappings;
@@ -7,6 +9,7 @@ public class MappingProfile : Profile
 {
     public MappingProfile()
     {
+        CreateMap<Blog, BlogViewModel>().ReverseMap();
         ApplyMappingsFromAssembly(Assembly.GetExecutingAssembly());
     }
 

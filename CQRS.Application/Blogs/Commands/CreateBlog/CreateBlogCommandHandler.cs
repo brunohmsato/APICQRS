@@ -14,6 +14,7 @@ public class CreateBlogCommandHandler(IBlogRepository repository, IMapper mapper
     public async Task<BlogViewModel> Handle(CreateBlogCommand request, CancellationToken cancellationToken)
     {
         var blogEntity = new Blog { Name = request.Name, Description = request.Description, Author = request.Author };
+
         var result = await _repository.CreateAsync(blogEntity);
 
         return _mapper.Map<BlogViewModel>(result);

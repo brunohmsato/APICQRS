@@ -8,6 +8,7 @@ namespace CQRS.Infra.Repository;
 public class BlogRepository(ApplicationDbContext context) : IBlogRepository
 {
     private readonly ApplicationDbContext _context = context;
+
     public async Task<Blog> CreateAsync(Blog blog)
     {
         await _context.Blogs.AddAsync(blog);

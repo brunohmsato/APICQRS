@@ -8,9 +8,9 @@ public static class ConfigureServices
     public static IServiceCollection AddAplicationServices(this IServiceCollection services)
     {
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
-        services.AddMediatR(ctg =>
+        services.AddMediatR(cfg =>
         {
-            ctg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
+            cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
         });
 
         return services;
