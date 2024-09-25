@@ -1,0 +1,6 @@
+@CQRS.API_HostAddress = http://localhost:5018
+
+GET {{CQRS.API_HostAddress}}/blog/
+Accept: application/json
+
+###
