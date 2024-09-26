@@ -1,4 +1,5 @@
 ﻿using CQRS.Application.Blogs.Commands.CreateBlog;
+using CQRS.Application.Blogs.Commands.UpdateBlog;
 using CQRS.Application.Blogs.Queries.GetBlogById;
 using CQRS.Application.Blogs.Queries.GetBlogs;
 using Microsoft.AspNetCore.Mvc;
@@ -33,6 +34,17 @@ namespace CQRS.API.Controllers
             var createdBlog = await Mediator.Send(command);
 
             return CreatedAtAction(nameof(GetById), new { id = createdBlog.Id}, createdBlog);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, UpdateBlogCommand command)
+        {
+            if(id != command.Id)
+                return BadRequest();
+
+            await Mediator.Send(command);
+
+            return NoContent();
         }
     }
 }
