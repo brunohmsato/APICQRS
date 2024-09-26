@@ -1,4 +1,5 @@
 ﻿using CQRS.Application.Blogs.Commands.CreateBlog;
+using CQRS.Application.Blogs.Commands.DeleteBlog;
 using CQRS.Application.Blogs.Commands.UpdateBlog;
 using CQRS.Application.Blogs.Queries.GetBlogById;
 using CQRS.Application.Blogs.Queries.GetBlogs;
@@ -45,6 +46,18 @@ namespace CQRS.API.Controllers
             await Mediator.Send(command);
 
             return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var command = new DeleteBlogCommand { Id = id };
+            var result = await Mediator.Send(command);
+
+            if (result > 0)
+                return Ok(result);
+
+            return NotFound();
         }
     }
 }
