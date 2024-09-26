@@ -1,7 +1,7 @@
 ﻿using CQRS.Application.Common.Mappings;
 using CQRS.Domain.Entity;
 
-namespace CQRS.Application.Blogs.Queries.GetBlogs;
+namespace CQRS.Application.Common.Models;
 
 public class BlogViewModel : IMapFrom<Blog>
 {

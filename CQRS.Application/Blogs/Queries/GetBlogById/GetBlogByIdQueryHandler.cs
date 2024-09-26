@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using CQRS.Application.Blogs.Queries.GetBlogs;
+using CQRS.Application.Common.Models;
 using CQRS.Domain.Repository;
 using MediatR;
 

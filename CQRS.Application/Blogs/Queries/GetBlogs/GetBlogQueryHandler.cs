@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using CQRS.Application.Common.Models;
 using CQRS.Domain.Repository;
 using MediatR;
 
