@@ -3,11 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CQRS.Infra.Data;
 
-public class ApplicationDbContext : DbContext
+public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> dbContextOptions) : DbContext(dbContextOptions)
 {
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> dbContextOptions) : base(dbContextOptions)
-    {
-    }
-
     public DbSet<Blog> Blogs { get; set; }
 }
