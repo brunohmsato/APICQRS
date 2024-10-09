@@ -1,0 +1,9 @@
+test_suite,test_name,scenario,duration,step_name,request_count,ok,failed,rps,min,mean,max,50_percent,75_percent,95_percent,99_percent,std_dev,data_transfer_min_kb,data_transfer_mean_kb,data_transfer_max_kb,data_transfer_all_mb
+nbomber_default_test_suite_name,nbomber_default_test_name,get_all_blogs_scenario,00:00:45,global information,635,635,0,14.1,3.47,6.01,42.88,5.08,6.33,10.89,16.59,3.44,0,0,0,0
+nbomber_default_test_suite_name,nbomber_default_test_name,get_blog_by_id_scenario,00:00:30,global information,300,300,0,10,2.76,5.63,36.62,4.79,5.92,9.94,15.48,3.35,0,0,0,0
+nbomber_default_test_suite_name,nbomber_default_test_name,get_blog_by_nonexistent_id_scenario,00:00:30,global information,300,300,0,10,2.8,5.62,36.1,4.67,6.08,9.86,18.85,3.35,0,0,0,0
+nbomber_default_test_suite_name,nbomber_default_test_name,create_blog_scenario,00:00:30,global information,150,150,0,5,3.46,53.55,484.8,6.74,157.06,161.15,471.04,89.13,0,0,0,0
+nbomber_default_test_suite_name,nbomber_default_test_name,create_invalid_blog_scenario,00:00:30,global information,300,300,0,10,0.41,1.54,17.33,0.95,1.85,4.39,6.37,1.58,0,0,0,0
+nbomber_default_test_suite_name,nbomber_default_test_name,update_blog_scenario,00:00:30,global information,150,150,0,5,3.13,70.26,485.77,7.58,158.34,310.78,325.38,96.06,0,0,0,0
+nbomber_default_test_suite_name,nbomber_default_test_name,update_mismatch_scenario,00:00:30,global information,150,150,0,5,0.42,1.8,17.47,1.12,2.06,4.94,8.63,1.9,0,0,0,0
+nbomber_default_test_suite_name,nbomber_default_test_name,delete_not_found_scenario,00:00:30,global information,150,150,0,5,2.03,60.45,626.35,5.18,155.78,311.3,315.9,101.12,0,0,0,0
